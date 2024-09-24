@@ -67,7 +67,11 @@ def draw_flower():
         draw_center()
 
     # Draw multiple flowers in different positions
-    positions = [(-100, 0), (100, 100), (-150, -150), (50, -100), (0, 150)]
+    positions = [
+        (-100, 0), (100, 100), (-150, -150), (50, -100), (0, 150),   # Original positions
+        (-250, 50), (200, -200), (-50, 200), (150, 0), (-200, -50),  # Additional flowers
+        (250, 50), (0, 250)
+    ]
 
     for pos in positions:
         draw_flower_at(pos[0], pos[1])
@@ -80,6 +84,7 @@ def draw_flower():
 
     # Hide the turtle once the drawing is complete
     my_turtle.hideturtle()
+
 def open_last_window():
     last_window = tk.Toplevel(root)
     last_window.geometry("600x150")
@@ -99,7 +104,7 @@ def open_last_window():
 
 def open_fifth_window():
     fifth_window = tk.Toplevel(root)
-    fifth_window.geometry("800x700")
+    fifth_window.geometry("1200x1200")
     fifth_window.title("Fifth Window")
 
     # Add a label in the fifth window
@@ -122,7 +127,7 @@ def open_fifth_window():
         elif name=="Cute":
             display_image("https://c4.wallpaperflare.com/wallpaper/737/192/969/animal-cute-dog-puppy-wallpaper-preview.jpg", "The small one is me, I know I am cute")
         elif name=="Angry":
-            display_image("https://www.usatoday.com/gcdn/-mm-/d22797dd5b2058d5bf8c19a1eae7510d58536ed0/c=0-0-1024-768/local/-/media/2018/05/14/USATODAY/usatsports/wp-USAT-allthemoms-front1-18809-angrydogx.jpg", "This is definetely you!!")
+            display_image("https://i.ytimg.com/vi/1-BfDBTFLSc/sddefault.jpg", "This is definetely you!!")
         elif name=="Cozy":
             display_image("https://t3.ftcdn.net/jpg/04/92/56/36/360_F_492563617_Kh31s1XYeHGb6Ff65DXfEpol23Su60ad.jpg", "The other one is me BTW ;)")
 
